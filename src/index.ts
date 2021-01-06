@@ -38,7 +38,7 @@ async function run() {
     if (await pathExists(brewRepoDir)) {
       await remove(brewRepoDir)
     }
-    await execa("git", ["clone", `git@github.com:${tapRepo}.git`], { cwd: tmpDir })
+    await execa("git", ["clone", `https://github.com/${tapRepo}`], { cwd: tmpDir })
 
     // read the existing formula
     console.log("Reading currently published formula")
