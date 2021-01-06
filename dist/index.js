@@ -40219,7 +40219,7 @@ function run() {
             if (yield fs_extra_1.pathExists(brewRepoDir)) {
                 yield fs_extra_1.remove(brewRepoDir);
             }
-            yield execa_1.default("git", ["clone", `git@github.com:${tapRepo}.git`], { cwd: tmpDir });
+            yield execa_1.default("git", ["clone", `https://github.com/${tapRepo}`], { cwd: tmpDir });
             // read the existing formula
             console.log("Reading currently published formula");
             const formulaDir = path_1.resolve(brewRepoDir, "Formula");
